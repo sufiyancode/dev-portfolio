@@ -54,7 +54,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <button
                     onClick={() => scrollToSection('home')}
-                    className="text-xl font-bold code-style gradient-text hover:opacity-80"
+                    className="text-xl font-bold code-style gradient-text hover:opacity-80 transition-opacity"
                 >
                     SufiyaN._
                 </button>
@@ -65,15 +65,15 @@ export default function Header() {
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
                             className={`code-style text-sm transition-colors relative ${activeSection === item.id
-                                    ? 'text-primary'
-                                    : 'text-muted-foreground hover:text-foreground'
+                                    ? 'text-amber-500'
+                                    : 'text-muted-foreground hover:text-foreground/80'
                                 }`}
                         >
                             // {item.label}
                             {activeSection === item.id && (
                                 <motion.div
                                     layoutId="activeSection"
-                                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
+                                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-amber-500"
                                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                                 />
                             )}

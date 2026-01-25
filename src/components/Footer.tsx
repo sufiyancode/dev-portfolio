@@ -14,7 +14,7 @@ export default function Footer() {
                         href={personalInfo.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-amber-500 transition-colors"
                         aria-label="GitHub"
                     >
                         GitHub
@@ -23,14 +23,14 @@ export default function Footer() {
                         href={personalInfo.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-amber-500 transition-colors"
                         aria-label="LinkedIn"
                     >
                         LinkedIn
                     </a>
                     <a
                         href={`mailto:${personalInfo.email}`}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-amber-500 transition-colors"
                         aria-label="Email"
                     >
                         Email

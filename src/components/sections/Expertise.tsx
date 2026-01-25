@@ -1,14 +1,16 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { staggerContainer, fadeInUp } from '@/lib/animations';
 import { expertise } from '@/data/content';
+import { Code, Globe, Server } from 'lucide-react';
 
-const iconMap: Record<string, string> = {
-    code: '💻',
-    network: '🌐',
-    server: '⚙️',
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    code: Code,
+    network: Globe,
+    server: Server,
 };
 
 export default function Expertise() {
@@ -49,8 +51,10 @@ export default function Expertise() {
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/60 to-orange-500/60 rounded-xl opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 blur-sm" />
 
                                 <div className="relative glass p-8 rounded-xl border border-border hover:border-amber-500/50 active:border-amber-500/50 hover:bg-amber-500/5 active:bg-amber-500/5 transition-all duration-300 cursor-pointer h-full flex flex-col items-center text-center">
-                                    <div className="text-4xl mb-5 group-hover:scale-105 transition-transform duration-300">
-                                        {iconMap[area.icon]}
+                                    <div className="mb-5 group-hover:scale-105 transition-transform duration-300">
+                                        {React.createElement(iconMap[area.icon], {
+                                            className: "w-12 h-12 text-foreground group-hover:text-amber-500 transition-colors duration-300"
+                                        })}
                                     </div>
                                     <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-amber-500 group-active:text-amber-500 transition-all duration-300">
                                         {area.title}

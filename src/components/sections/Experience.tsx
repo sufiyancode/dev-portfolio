@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { staggerContainer, fadeInUp } from '@/lib/animations';
 import { experience } from '@/data/content';
+import { MapPin, Calendar } from 'lucide-react';
 
 export default function Experience() {
     const [expandedId, setExpandedId] = useState<string | null>(experience[0].id);
@@ -61,10 +62,10 @@ export default function Experience() {
                                                 </h3>
                                                 <div className="flex flex-wrap gap-2 text-xs">
                                                     <span className="code-style flex items-center gap-1.5 px-3 py-1.5 bg-muted/80 rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-200">
-                                                        📍 {exp.location}
+                                                        <MapPin className="w-3 h-3" /> {exp.location}
                                                     </span>
                                                     <span className="code-style flex items-center gap-1.5 px-3 py-1.5 bg-muted/80 rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-200">
-                                                        🗓️ {exp.duration}
+                                                        <Calendar className="w-3 h-3" /> {exp.duration}
                                                     </span>
                                                 </div>
                                             </div>

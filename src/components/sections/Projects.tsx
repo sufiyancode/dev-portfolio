@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { staggerContainer, fadeInUp, fadeInUpWithExit } from '@/lib/animations';
 import { projects } from '@/data/content';
+import { Star } from 'lucide-react';
 
 type Category = 'all' | 'web' | 'ml' | 'community' | 'enterprise';
 
@@ -59,8 +60,8 @@ export default function Projects() {
 
                             <div className="relative glass p-6 md:p-10 rounded-xl border border-amber-500/30 hover:border-amber-500/50 transition-all text-left">
                                 <div className="flex items-start justify-between mb-5">
-                                    <span className="code-style text-xs font-semibold text-amber-500 px-3 md:px-3 py-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20 mr-3">
-                                        ⭐ Featured Project
+                                    <span className="code-style text-xs font-semibold text-amber-500 px-3 md:px-3 py-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20 mr-3 inline-flex items-center gap-1.5">
+                                        <Star className="w-3 h-3 fill-amber-500" /> Featured Project
                                     </span>
                                     <span className="code-style text-xs text-muted-foreground px-3 py-1.5 bg-muted rounded-lg capitalize">
                                         {featuredProject.category}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { personalInfo } from '@/data/content';
+import { Mail, Briefcase, Github, Smartphone } from 'lucide-react';
 
 export default function Contact() {
     const [ref, inView] = useInView({
@@ -38,7 +39,7 @@ export default function Contact() {
                             href={`mailto:${personalInfo.email}`}
                             className="flex items-center gap-3 p-4 rounded bg-muted hover:bg-primary/10 hover:border-primary/50 border border-transparent transition-all group"
                         >
-                            <span className="text-2xl">📧</span>
+                            <Mail className="w-6 h-6" />
                             <div className="text-left">
                                 <div className="text-xs text-muted-foreground mb-1">Email</div>
                                 <div className="code-style text-sm group-hover:text-primary transition-colors">
@@ -53,7 +54,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-4 rounded bg-muted hover:bg-primary/10 hover:border-primary/50 border border-transparent transition-all group"
                         >
-                            <span className="text-2xl">💼</span>
+                            <Briefcase className="w-6 h-6" />
                             <div className="text-left">
                                 <div className="text-xs text-muted-foreground mb-1">LinkedIn</div>
                                 <div className="code-style text-sm group-hover:text-primary transition-colors">
@@ -68,7 +69,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-4 rounded bg-muted hover:bg-primary/10 hover:border-primary/50 border border-transparent transition-all group"
                         >
-                            <span className="text-2xl">💻</span>
+                            <Github className="w-6 h-6" />
                             <div className="text-left">
                                 <div className="text-xs text-muted-foreground mb-1">GitHub</div>
                                 <div className="code-style text-sm group-hover:text-primary transition-colors">
@@ -81,7 +82,7 @@ export default function Contact() {
                             href={`tel:${personalInfo.phone}`}
                             className="flex items-center gap-3 p-4 rounded bg-muted hover:bg-primary/10 hover:border-primary/50 border border-transparent transition-all group"
                         >
-                            <span className="text-2xl">📱</span>
+                            <Smartphone className="w-6 h-6" />
                             <div className="text-left">
                                 <div className="text-xs text-muted-foreground mb-1">Phone</div>
                                 <div className="code-style text-sm group-hover:text-primary transition-colors">

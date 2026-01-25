@@ -36,32 +36,32 @@ export default function Expertise() {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
                         {expertise.map((area, index) => (
                             <motion.div
                                 key={area.id}
                                 variants={fadeInUp}
-                                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                                className="relative group"
+                                whileHover={{ y: -6, transition: { duration: 0.3, ease: 'easeOut' } }}
+                                className="relative group m-2 md:m-3"
                             >
                                 {/* Gradient border effect */}
-                                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/60 to-orange-500/60 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm mt-2" />
 
-                                <div className="relative glass p-10 rounded-xl border border-border hover:border-primary/30 transition-all cursor-pointer h-full flex flex-col items-center text-center">
-                                    <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <div className="relative glass p-10 rounded-xl border border-border hover:border-amber-500/50 hover:bg-amber-500/5 transition-all duration-300 cursor-pointer h-full flex flex-col items-center text-center">
+                                    <div className="text-5xl mb-6 group-hover:scale-105 transition-transform duration-300">
                                         {iconMap[area.icon]}
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 group-hover:gradient-text transition-all">
+                                    <h3 className="text-2xl font-bold mb-4 group-hover:text-amber-500 transition-all duration-300">
                                         {area.title}
                                     </h3>
-                                    <p className="text-muted-foreground mb-6 text-sm leading-relaxed min-h-[60px]">
+                                    <p className="text-muted-foreground group-hover:text-foreground/80 mb-6 text-sm leading-relaxed min-h-[60px] transition-colors duration-300">
                                         {area.description}
                                     </p>
-                                    <div className="flex flex-wrap justify-center gap-2 pt-4 border-t border-border/50 w-full">
+                                    <div className="flex flex-wrap justify-center gap-2.5 pt-4 border-t border-border/50 w-full">
                                         {area.technologies.slice(0, 4).map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="code-style text-xs px-3 py-1.5 bg-muted rounded-md text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                                                className="code-style text-xs px-3.5 py-2 bg-muted/80 rounded-lg text-muted-foreground hover:bg-amber-500/15 hover:text-amber-500 hover:border-amber-500/30 hover:shadow-lg hover:shadow-amber-500/20 border border-transparent transition-all duration-200"
                                             >
                                                 {tech}
                                             </span>

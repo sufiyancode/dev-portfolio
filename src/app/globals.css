@@ -13,11 +13,16 @@
   --primary-dark: #2563eb;
   --secondary: #8b5cf6;
   --secondary-dark: #7c3aed;
-  
+
   /* Gradient colors */
   --gradient-from: #3b82f6;
   --gradient-to: #8b5cf6;
-  
+
+  /* Hover accent colors - Amber/Orange */
+  --hover-accent: #f59e0b;
+  --hover-accent-light: #fb923c;
+  --hover-accent-dark: #d97706;
+
   /* Status colors */
   --success: #10b981;
   --warning: #f59e0b;

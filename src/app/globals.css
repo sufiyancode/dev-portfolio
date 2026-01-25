@@ -179,3 +179,10 @@ a, button {
     cursor: pointer;
   }
 }
+
+/* Mobile bottom navigation spacing */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+  }
+}

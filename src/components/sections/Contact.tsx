@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { personalInfo } from '@/data/content';
-import { Mail, Briefcase, Github, Smartphone } from 'lucide-react';
+import { Mail, Briefcase, Github, Smartphone, Download } from 'lucide-react';
 
 export default function Contact() {
     const [ref, inView] = useInView({
@@ -93,9 +93,19 @@ export default function Contact() {
                     </div>
                 </motion.div>
 
-                <motion.p variants={fadeInUp} className="text-muted-foreground">
+                <motion.p variants={fadeInUp} className="text-muted-foreground mb-8">
                     Based in {personalInfo.location}
                 </motion.p>
+
+                <motion.a
+                    variants={fadeInUp}
+                    href="/Sufiyan_Resume.pdf"
+                    download="Sufiyan_Resume.pdf"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/50 active:scale-95 group"
+                >
+                    <Download className="w-5 h-5 group-hover:animate-bounce" />
+                    <span>Download Resume</span>
+                </motion.a>
             </motion.div>
         </section>
     );

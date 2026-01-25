@@ -151,8 +151,31 @@ a, button {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices to prevent sticky states */
+  .glass:hover {
+    background: rgba(26, 26, 26, 0.6);
+  }
+
+  /* Ensure transitions are shorter on touch for immediate feedback */
+  .transition-all,
+  .transition-colors,
+  .transition-opacity {
+    transition-duration: 0.2s;
+  }
+}
+
+/* Hover-capable device enhancements */
+@media (hover: hover) and (pointer: fine) {
+  /* Enhance hover effects for mouse users */
+  .cursor-pointer:hover {
+    cursor: pointer;
   }
 }

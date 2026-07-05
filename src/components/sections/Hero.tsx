@@ -18,7 +18,7 @@ export default function Hero() {
             >
                 <motion.div variants={fadeInUp} className="mb-6">
                     <span className="code-style text-primary text-sm">
-                        // Full Stack Software Engineer
+                        {'// Full Stack Software Engineer'}
                     </span>
                 </motion.div>
 
@@ -49,7 +49,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         className="code-style text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                        // github
+                        {'// github'}
                     </a>
                     <a
                         href={personalInfo.linkedin}
@@ -57,7 +57,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         className="code-style text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                        // linkedin
+                        {'// linkedin'}
                     </a>
                 </motion.div>
 

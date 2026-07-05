@@ -39,20 +39,17 @@ export default function Experience() {
                                 variants={fadeInUp}
                                 className={`relative group mb-6 md:mb-8 ${index === experience.length - 1 ? 'mb-0' : ''}`}
                             >
-                                {/* Enhanced gradient border on hover */}
-                                <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/50 to-orange-500/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
-
-                                <div className="relative glass rounded-xl border border-border overflow-hidden transition-all duration-300 hover:border-amber-500/50">
+                                <div className="interactive-card glass rounded-xl border border-border">
                                     <button
                                         onClick={() =>
                                             setExpandedId(expandedId === exp.id ? null : exp.id)
                                         }
-                                        className="w-full p-6 md:p-8 text-left hover:bg-muted/10 transition-colors duration-300"
+                                        className="w-full p-6 md:p-8 text-left transition-colors duration-300"
                                     >
                                         <div className="flex items-start justify-between gap-4 md:gap-6">
                                             <div className="flex-1 space-y-3">
                                                 <h3 className="text-xl md:text-2xl font-bold leading-tight">
-                                                    <span className="group-hover:text-amber-500 transition-all duration-300">
+                                                    <span>
                                                         {exp.role}
                                                     </span>
                                                     {' '}

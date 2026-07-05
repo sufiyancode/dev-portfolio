@@ -107,6 +107,66 @@ a, button {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Shared card hover treatment */
+.interactive-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.interactive-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(245, 158, 11, 0.06), transparent 36%),
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12), transparent 42%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.interactive-card::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.65), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.interactive-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.interactive-card:hover,
+.interactive-card:focus-within {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.12),
+    0 18px 44px rgba(0, 0, 0, 0.28),
+    0 0 34px rgba(245, 158, 11, 0.08);
+}
+
+.interactive-card:hover::before,
+.interactive-card:hover::after,
+.interactive-card:focus-within::before,
+.interactive-card:focus-within::after {
+  opacity: 1;
+}
+
 /* Code-style text */
 .code-style {
   font-family: var(--font-geist-mono), 'Courier New', monospace;

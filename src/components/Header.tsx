@@ -71,7 +71,7 @@ export default function Header() {
                                         : 'text-muted-foreground hover:text-foreground/80'
                                     }`}
                             >
-                                // {item.label}
+                                {`// ${item.label}`}
                                 {activeSection === item.id && (
                                     <motion.div
                                         layoutId="activeSection"

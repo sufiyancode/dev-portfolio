@@ -39,7 +39,7 @@ export default function Expertise() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        {expertise.map((area, index) => (
+                        {expertise.map((area) => (
                             <motion.div
                                 key={area.id}
                                 variants={fadeInUp}
@@ -47,16 +47,13 @@ export default function Expertise() {
                                 whileTap={{ scale: 0.98 }}
                                 className="relative group"
                             >
-                                {/* Gradient border effect */}
-                                <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/60 to-orange-500/60 rounded-xl opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 blur-sm" />
-
-                                <div className="relative glass p-8 rounded-xl border border-border hover:border-amber-500/50 active:border-amber-500/50 hover:bg-amber-500/5 active:bg-amber-500/5 transition-all duration-300 cursor-pointer h-full flex flex-col items-center text-center">
+                                <div className="interactive-card glass p-8 rounded-xl border border-border cursor-pointer h-full flex flex-col items-center text-center">
                                     <div className="mb-5 group-hover:scale-105 transition-transform duration-300">
                                         {React.createElement(iconMap[area.icon], {
                                             className: "w-12 h-12 text-foreground group-hover:text-amber-500 transition-colors duration-300"
                                         })}
                                     </div>
-                                    <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-amber-500 group-active:text-amber-500 transition-all duration-300">
+                                    <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-amber-500 group-active:text-amber-500 transition-colors duration-300">
                                         {area.title}
                                     </h3>
                                     <p className="text-muted-foreground group-hover:text-foreground/80 mb-5 text-sm leading-relaxed min-h-[60px] transition-colors duration-300">

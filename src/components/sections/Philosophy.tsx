@@ -21,11 +21,11 @@ export default function Philosophy() {
                     variants={fadeInUp}
                     className="text-center"
                 >
-                    <div className="text-6xl mb-8 opacity-20">"</div>
+                    <div className="text-6xl mb-8 opacity-20">&quot;</div>
                     <blockquote className="text-2xl md:text-3xl font-light leading-relaxed text-foreground/90 italic">
                         {philosophy.quote}
                     </blockquote>
-                    <div className="text-6xl mt-8 opacity-20 rotate-180">"</div>
+                    <div className="text-6xl mt-8 opacity-20 rotate-180">&quot;</div>
                 </motion.div>
             </div>
         </section>

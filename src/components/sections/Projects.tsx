@@ -55,10 +55,7 @@ export default function Projects() {
                             variants={fadeInUp}
                             className="relative group mb-16"
                         >
-                            {/* Gradient border effect */}
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/50 via-orange-500/50 to-amber-500/50 rounded-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 blur" />
-
-                            <div className="relative glass p-6 md:p-10 rounded-xl border border-amber-500/30 hover:border-amber-500/50 transition-all text-left">
+                            <div className="interactive-card glass p-6 md:p-10 rounded-xl border border-amber-500/30 text-left">
                                 <div className="flex items-start justify-between mb-5">
                                     <span className="code-style text-xs font-semibold text-amber-500 px-3 md:px-3 py-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20 mr-3 inline-flex items-center gap-1.5">
                                         <Star className="w-3 h-3 fill-amber-500" /> Featured Project
@@ -123,10 +120,7 @@ export default function Projects() {
                                         whileTap={{ scale: 0.98 }}
                                         className="relative group"
                                     >
-                                        {/* Gradient border - now with mobile tap support */}
-                                        <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/50 to-orange-500/50 rounded-xl opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 blur-sm" />
-
-                                        <div className="relative glass p-6 md:p-8 rounded-xl border border-border hover:border-amber-500/50 active:border-amber-500/50 transition-all cursor-pointer h-full flex flex-col">
+                                        <div className="interactive-card glass p-6 md:p-8 rounded-xl border border-border cursor-pointer h-full flex flex-col">
                                             <div className="flex items-start justify-between mb-3">
                                                 <h3 className="text-lg md:text-xl font-bold group-hover:text-amber-500 group-active:text-amber-500 transition-colors flex-1 pr-3">
                                                     {project.name}

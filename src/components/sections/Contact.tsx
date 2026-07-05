@@ -23,7 +23,7 @@ export default function Contact() {
             >
                 <motion.div variants={fadeInUp} className="mb-8">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        Let's Work Together
+                        Let&apos;s Work Together
                     </h2>
                     <p className="text-xl text-muted-foreground">
                         Available for impactful opportunities
